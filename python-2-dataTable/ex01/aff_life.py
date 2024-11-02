@@ -3,6 +3,7 @@ import seaborn as sns
 from load_csv import load
 import matplotlib.pyplot as plt
 
+
 def main():
     display_country_informations("../ex00/life_expectancy_years.csv")
     return
@@ -10,10 +11,10 @@ def main():
 def display_country_informations(path: str):
     try:
         dataset = load(path)
-        
+
         country_data = dataset[dataset['country'] == 'Morocco']
         if country_data.empty:
-            print(f"No data found for the chosen country")
+            print("No data found for the chosen country")
             return
 
         # Reshape data for plotting
@@ -29,7 +30,7 @@ def display_country_informations(path: str):
         # Plot the data
         plt.figure(figsize=(10, 6))
         sns.lineplot(data=country_data, x='Year', y='Life Expectancy')
-        plt.title(f"Life Expectancy in Morocco Over Time")
+        plt.title("Life Expectancy in Morocco Over Time")
         plt.xlabel("Year")
         plt.ylabel("Life Expectancy")
         plt.xticks(rotation=45)
