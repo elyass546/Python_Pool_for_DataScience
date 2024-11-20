@@ -1,4 +1,3 @@
-# Import seaborn
 import seaborn as sns
 from load_csv import load
 import matplotlib.pyplot as plt
@@ -6,7 +5,7 @@ import matplotlib.pyplot as plt
 
 def main():
     display_country_informations("../ex00/life_expectancy_years.csv")
-    return
+
 
 def display_country_informations(path: str):
     try:
@@ -18,18 +17,22 @@ def display_country_informations(path: str):
             return
 
         # Reshape data for plotting
-        # We drop the 'country' column and set years as the columns
         country_data = country_data.drop(columns='country').T
         country_data.columns = ['Life Expectancy']
         country_data.index.name = 'Year'
         country_data.reset_index(inplace=True)
 
-        # Convert the 'Year' column to integers if needed
+        # Convert 'Year' and 'Life Expectancy' columns to appropriate types
         country_data['Year'] = country_data['Year'].astype(int)
+        life_expectancy_year = country_data['Life Expectancy'].astype(float)
+
+        # Convert columns to numpy arrays and ensure they are 1D
+        years = country_data['Year'].to_numpy().reshape(-1)
+        life_expectancy = life_expectancy_year.to_numpy().reshape(-1)
 
         # Plot the data
         plt.figure(figsize=(10, 6))
-        sns.lineplot(data=country_data, x='Year', y='Life Expectancy')
+        sns.lineplot(x=years, y=life_expectancy)
         plt.title("Life Expectancy in Morocco Over Time")
         plt.xlabel("Year")
         plt.ylabel("Life Expectancy")
@@ -44,6 +47,7 @@ def display_country_informations(path: str):
 
     except KeyError as e:
         print(f"Error: Missing expected column - {e}")
+
 
 if __name__ == "__main__":
     main()

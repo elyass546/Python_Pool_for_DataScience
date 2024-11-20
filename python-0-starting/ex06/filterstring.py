@@ -1,6 +1,7 @@
 from ft_filter import ft_filter
 import sys
 
+
 def main():
     # Check if the correct number of arguments are provided
     if len(sys.argv) != 3:
@@ -21,13 +22,20 @@ def main():
     splited_string = input_string.split(' ')
 
     # Use ft_filter to filter words based on length
-    result = list(ft_filter(lambda word: string_checker(word, provided_len), splited_string))
+    result = list(ft_filter(
+                    lambda word: string_checker(word, provided_len),
+                    splited_string))
 
     print(result)
 
+
 def string_checker(word, pro_len):
-    """Checks if the length of the word is greater than or equal to the provided length."""
+    """
+        Checks if the length of the word is
+        greater than or equal to the provided length.
+    """
     return len(word) >= pro_len
+
 
 if __name__ == "__main__":
     main()

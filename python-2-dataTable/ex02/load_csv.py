@@ -1,21 +1,18 @@
 import pandas as pd
 from typing import Optional
 
-def main():
-    data = load("life_expectancy_years.csv")
-    print(data)
 
 def load(path: str) -> Optional[pd.DataFrame]:
     try:
         # Load the dataset
         dataset = pd.read_csv(path)
-        
+
         # Write (print) the dimensions of the dataset
         print(f"Loading dataset of dimensions {dataset.shape}")
-        
+
         # Return the dataset
         return dataset
-    
+
     except FileNotFoundError:
         print("Error: File not found.")
         return None
@@ -25,6 +22,3 @@ def load(path: str) -> Optional[pd.DataFrame]:
     except pd.errors.ParserError:
         print("Error: File is not in a valid CSV format.")
         return None
-
-if __name__ == "__main__":
-    main()

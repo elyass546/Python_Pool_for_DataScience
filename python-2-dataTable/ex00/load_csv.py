@@ -2,6 +2,10 @@ import pandas as pd
 from typing import Optional
 
 
+def main():
+    print(load("life_expectancy_years.csv"))
+
+
 def load(path: str) -> Optional[pd.DataFrame]:
     try:
         # Load the dataset
@@ -22,3 +26,7 @@ def load(path: str) -> Optional[pd.DataFrame]:
     except pd.errors.ParserError:
         print("Error: File is not in a valid CSV format.")
         return None
+
+
+if __name__ == "__main__":
+    main()

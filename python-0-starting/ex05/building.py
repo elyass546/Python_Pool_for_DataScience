@@ -1,10 +1,9 @@
 import sys
 import string
 
-#Need to check the carriage return
 
+# Need to check the carriage return
 def main():
-
     if len(sys.argv) > 2:
         print("AssertionError: more than one argument is provided")
         return
@@ -35,7 +34,9 @@ def main():
                 space_count += 1
             elif char in string.punctuation:
                 punctuation_count += 1
-        total_count = uppercase_count + lowercase_count + punctuation_count + space_count + digit_count
+        total_count = (
+            uppercase_count + lowercase_count +
+            punctuation_count + space_count + digit_count)
 
         print(f"The text contains {total_count} characters:")
         print(f"{uppercase_count} upper letters")
@@ -43,6 +44,7 @@ def main():
         print(f"{punctuation_count} punctuation marks")
         print(f"{space_count} spaces")
         print(f"{digit_count} digits")
+
 
 if __name__ == "__main__":
     main()

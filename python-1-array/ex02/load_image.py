@@ -2,9 +2,6 @@ from PIL import Image
 import numpy as np
 import array
 
-def main():
-    # image path is : "./test.jpg"
-    print(ft_load("image.jpeg"))
 
 def ft_load(path: str) -> array:
     try:
@@ -19,16 +16,14 @@ def ft_load(path: str) -> array:
 
         # Print the shape of the image (height, width, channels)
         print(f"The shape of the image is: {pixel_data.shape}")
-        
+
         # Return the pixel data (or whatever you want)
         return pixel_data
-    
+
     except FileNotFoundError:
         print("Error: The specified file was not found.")
     except IOError:
-        print("Error: The file could not be opened. Please ensure it is a valid image.")
+        print("Error: The file could not be opened.\
+            Please ensure it is a valid image.")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
-
-if __name__ == "__main__":
-    main()
