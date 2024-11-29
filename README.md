@@ -1,10 +1,10 @@
-#Python Training Piscine - Day 00
+# Python Training Piscine - Day 00
 
 Welcome to Day 00 of the **Python Training Piscine** for **Data Science**! This repository contains.
 solutions and resources for the exercises outlined in the subject document. The exercises are
 designed to introduce the basics of Python programming while adhering to strict coding standards.
 
-##Project Overview
+## Project Overview
 +**Language**: Python 3.10
 +**Focus**: Learning Python fundamentals through practical exercises.
 +**Key Topics**:
