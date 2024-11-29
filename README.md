@@ -7,7 +7,7 @@ designed to introduce the basics of Python programming while adhering to strict 
 ## Project Overview
 1. **Language**: Python 3.10
 2. **Focus**: Learning Python fundamentals through practical exercises.
-3. Key Topics**:
+3. **Key Topics**:
    - Writing Python scripts
    - Handling data types and structures
    - Utilizing Python functions and libraries
