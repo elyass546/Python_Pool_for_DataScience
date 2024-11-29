@@ -5,15 +5,15 @@ solutions and resources for the exercises outlined in the subject document. The 
 designed to introduce the basics of Python programming while adhering to strict coding standards.
 
 ## Project Overview
-+**Language**: Python 3.10
-+**Focus**: Learning Python fundamentals through practical exercises.
-+**Key Topics**:
-    + Writing Python scripts
-    + Handling data types and structures
-    + Utilizing Python functions and libraries
-    + Creating standalone programs
-    + Re-implementing built-in functions
-    + Encoding data in Morse Code
-    + Developing a Python package
+1. **Language**: Python 3.10
+2. **Focus**: Learning Python fundamentals through practical exercises.
+3. Key Topics**:
+   - Writing Python scripts
+   - Handling data types and structures
+   - Utilizing Python functions and libraries
+   - Creating standalone programs
+   - Re-implementing built-in functions
+   - Encoding data in Morse Code
+   - Developing a Python package
 
-##Repository Structure
+## Repository Structure
